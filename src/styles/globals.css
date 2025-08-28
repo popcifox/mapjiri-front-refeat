@@ -1,0 +1,151 @@
+/* ==== 네가 보낸 모든 CSS를 그대로 묶어서 사용 ==== */
+
+/* 기본 스타일 */
+body {
+    font-family: 'Malgun Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* 헤더 */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+header h1 { margin: 0; }
+
+/* 탭 메뉴 스타일 */
+nav ul.tabs { list-style: none; padding: 0; margin: 10px 0 0; display: flex; justify-content: center; }
+nav ul.tabs li.tab { margin-right: 15px; padding: 8px 16px; background: #666; cursor: pointer; border-radius: 4px; color: #fff; transition: background 0.3s ease; }
+nav ul.tabs li.tab.active { background: #007bff; }
+
+/* 탭 콘텐츠 */
+.tab-content { display: none; flex-direction: column; align-items: stretch; gap: 20px; padding: 20px; margin: 20px auto; max-width: 800px; }
+.tab-content.active { display: flex; }
+
+/* 검색 폼 영역 */
+.search-form { width: 100%; text-align: right; }
+.search-group { display: flex; align-items: center; gap: 10px; flex-wrap: nowrap; white-space: nowrap; font-size: 14px; }
+#search-options select { padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 150px; }
+#search-options button, form button { padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease-in-out; }
+#search-options button:hover, form button:hover { background-color: #0056b3; }
+.favorite-btn { background: none; border: none; font-size: 14px; color: #007bff; cursor: pointer; margin-left: 5px; }
+.favorite-btn:hover { color: #0056b3; }
+
+/* 탭3 */
+#tab-filter .search-container { display: flex; align-items: center; gap: 20px; flex-wrap: nowrap; white-space: nowrap; }
+#tab-filter .search-group { gap: 20px; }
+
+/* 즐겨찾기 */
+.favorites-wrapper { width: 100%; }
+.favorites-accordion { text-align: center; border: 1px solid #007bff; border-radius: 4px; background-color: #fff; }
+.accordion-header { background-color: #007bff; color: #fff; padding: 10px; cursor: pointer; user-select: none; font-size: 16px; text-align: center; }
+.accordion-content { display: none; padding: 10px; border-top: 1px solid #007bff; }
+.favorites-container { display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; gap: 20px; }
+.divider { width: 1px; background-color: #ccc; margin: 0 10px; }
+.favorites-section { flex: 1; }
+.favorites-section h3 { font-size: 16px; margin-bottom: 5px; text-align: center; }
+.favorites-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.favorites-list li { flex: 0 0 calc(50% - 10px); box-sizing: border-box; padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #fafafa; text-align: center; }
+.fav-star { font-size: 12px; padding: 2px 4px; background: none; border: none; cursor: pointer; color: #007bff; }
+.fav-star:hover { color: #0056b3; }
+
+/* 맵/리스트 */
+#map-results { display: flex; gap: 5px; justify-content: center; align-items: flex-start; }
+#ranking { width: 200px; background-color: #fff; padding: 10px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); height: 500px; overflow-y: auto; }
+#ranking h2 { font-size: 18px; margin-bottom: 10px; text-align: center; }
+#rankingList { list-style: none; margin: 0; padding: 0; }
+#rankingList li { display: flex; align-items: center; gap: 10px; padding: 8px; border-bottom: 1px solid #eee; transition: background-color 0.3s ease; }
+#rankingList li:hover { background-color: #f0f8ff; }
+.ranking-badge { background-color: #007bff; color: #fff; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; }
+.ranking-badge.gold { background-color: gold; }
+.ranking-badge.silver { background-color: silver; }
+.ranking-badge.bronze { background-color: #cd7f32; }
+.ranking-keyword { flex: 1; text-align: center; font-size: 16px; font-weight: 500; }
+#map { width: 520px; height: 520px; background: #eaeaea; border: 1px solid #ddd; border-radius: 4px; }
+#menu_wrap { display: block; width: 250px; background: #fff; padding: 10px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+#placesList { list-style: none; padding: 0; margin: 0; }
+.item { display: flex; align-items: center; gap: 10px; padding: 10px; border-bottom: 1px solid #ddd; cursor: pointer; transition: background-color 0.3s ease; }
+.item:hover { background-color: #f9f9f9; }
+.item:last-child { border-bottom: none; }
+.markerbg { display: inline-block; width: 24px; height: 24px; background-color: #007bff; color: #fff; text-align: center; line-height: 24px; border-radius: 50%; margin-right: 10px; }
+.info { flex: 1; text-align: left; }
+.info h5 { margin: 0; font-size: 16px; }
+.info span { display: block; font-size: 12px; color: #555; }
+#pagination { text-align: center; margin-top: 10px; }
+#pagination a { margin: 0 5px; text-decoration: none; color: #007bff; cursor: pointer; }
+#pagination a.on { font-weight: bold; color: #0056b3; }
+
+/* 로그인 버튼 */
+.login-button { position: absolute; top: 15px; right: 20px; background-color: #ff4081; color: white; border: none; padding: 10px 15px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; }
+.login-button:hover { background-color: #d81b60; }
+
+/* 리뷰 페이지 헤더 */
+.header-top { background-color: #333; color: white; padding: 10px 20px; font-size: 32px; }
+.header-bottom { background-color: #0277f5; color: #ffffff; padding: 10px 20px; font-size: 14px; }
+
+/* 리뷰 리스트 */
+#reviewContainer { width: 90%; max-width: 1000px; margin: 20px auto; }
+.review-box { display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+.review-box img { width: 250px; height: 250px; border-radius: 10px; object-fit: cover; margin-right: 20px; }
+.no-image { width: 250px; height: 250px; background-color: #e0e0e0; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #666; font-weight: bold; flex-shrink: 0; margin-right: 20px; }
+.review-content { flex-grow: 1; font-size: 18px; line-height: 1.8; word-break: break-word; }
+.review-footer { display: flex; justify-content: space-between; margin-top: 10px; font-size: 16px; color: #666; }
+.review-score { font-weight: bold; font-size: 18px; color: #ff6600; }
+
+/* 로그인/회원가입 카드 */
+.login-container, .register-container { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+.login-container h2, .register-container h2 { margin-bottom: 20px; }
+.login-container input[type="text"], .login-container input[type="password"],
+.register-container input[type="email"], .register-container input[type="text"], .register-container input[type="password"] {
+  width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+.login-container button, .register-container button { width: 100%; padding: 10px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+.login-container button { background-color: #007BFF; color:#fff; }
+.login-container button:hover { background-color: #0056b3; }
+.login-container .signup-btn { background-color: #28a745; }
+.login-container .signup-btn:hover { background-color: #1e7e34; }
+
+#sendCodeBtn { background-color: #17a2b8; color:#fff; }
+#sendCodeBtn:hover { background-color: #138496; }
+#verifyBtn { background-color: #28a745; color:#fff; }
+#verifyBtn:hover { background-color: #218838; }
+button[type="submit"] { background-color: #007BFF; color:#fff; }
+button[type="submit"]:hover { background-color: #0056b3; }
+
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 화면 높이 기준으로 세로 중앙 */
+  padding: 20px; /* 모바일에서 여백 추가 */
+  box-sizing: border-box;
+}
+
+/* 로그인/회원가입 컨테이너 반응형 개선 */
+.login-container, .register-container { 
+  background: #fff; 
+  padding: 30px; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1); 
+  width: 100%; 
+  max-width: 400px; /* 최대 너비 제한 */
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* 모바일에서 더 나은 반응형 */
+@media (max-width: 480px) {
+  .login-container, .register-container {
+    padding: 20px;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+  
+  .page-center {
+    padding: 10px;
+  }
+}
